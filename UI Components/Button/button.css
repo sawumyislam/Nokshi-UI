@@ -1,0 +1,85 @@
+@import url("../root.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonts);
+  background-color: var(--bg);
+}
+
+/* hover */
+.primary-large-btn:hover,
+.primary-medium-btn:hover,
+.primary-small-btn:hover,
+.secondary-large-btn:hover,
+.secondary-medium-btn:hover,
+.secondary-small-btn:hover {
+  color: white;
+  background-color: var(--bg-dark);
+  border-style: solid;
+  border-color: var(--bg-light);
+}
+
+/* Primary buttons */
+.primary-large-btn {
+  height: 40px;
+  width: 96px;
+  font-size: 110%;
+}
+
+.primary-medium-btn {
+  height: 32px;
+  width: 84px;
+}
+
+.primary-small-btn {
+  height: 26px;
+  width: 72px;
+  font-size: 70%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.primary-medium-btn,
+.primary-large-btn,
+.primary-small-btn {
+  background-color: var(--bg-light);
+  color: var(--text-muted);
+  border-style: none;
+  border-radius: 0.25rem;
+}
+
+/* Secondary bottons */
+.secondary-large-btn {
+  height: 40px;
+  width: 96px;
+  font-size: 110%;
+}
+
+.secondary-medium-btn {
+  height: 32px;
+  width: 84px;
+}
+
+.secondary-small-btn {
+  height: 26px;
+  width: 72px;
+  font-size: 70%;
+}
+
+.secondary-large-btn,
+.secondary-medium-btn,
+.secondary-small-btn {
+  margin: 1rem;
+  color: var(--bg);
+  font-family: var(--fonts);
+
+  border-style: solid;
+  border-color: var(--bg-dark);
+  border-radius: 4px;
+}

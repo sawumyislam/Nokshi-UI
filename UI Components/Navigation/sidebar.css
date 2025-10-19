@@ -1,0 +1,72 @@
+@import url("../root.css");
+
+.sidebar {
+  width: relative;
+  height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-family: var(--fonts);
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.sidebar-menu a:hover {
+  color: var(--text);
+}
+#country {
+  background-color: inherit;
+  border-radius: 0.2rem;
+  margin: 0;
+  padding: 0;
+  color: var(--text-muted);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+#country:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+.toggle-btn {
+  position: absolute;
+  top: 1rem;
+  right: -3rem;
+  background-color: var(--bg-light);
+  border: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+}
+
+/* not reay yet */
+.toggle-btn:hover {
+  background-color: var(--bg-dark);
+  /* taggle button needs to done */
+  color: var(--text);
+}
+.sidebar.open {
+  width: 200px;
+}
+.sidebar.closed {
+  width: 60px;
+}
+.sidebar.closed .sidebar-menu {
+  display: none;
+}
+.sidebar.closed .toggle-btn {
+  right: -2rem;
+}

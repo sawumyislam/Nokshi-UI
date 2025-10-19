@@ -1,0 +1,12 @@
+:root {
+  --bg: hsl(220, 0%, 20%);
+  --bg-dark: hsl(220, 0%, 13%);
+  --bg-light: hsl(220, 0%, 30%);
+  --text: hsl(220, 0%, 95%);
+  --text-muted: hsl(220, 0%, 70%);
+  --fonts: Arial, sans-serif;
+  --success: hsl(120, 70%, 70%);
+  --error: hsl(0, 70%, 70%);
+  --info: hsl(200, 70%, 70%);
+  --warning: hsl(40, 100%, 70%);
+}

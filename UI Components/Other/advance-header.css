@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Intel One Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+:root {
+  --baseColor: #65b741;
+  --primaryColor: #dafaff;
+  --secondaryColor: yellow;
+  --borderColor: #3e3117;
+  --actionColor: #f3095c;
+}
+
+header {
+  height: 6em;
+  width: 100%;
+  background-color: var(--baseColor);
+  border-bottom: 2px solid var(--borderColor);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2em 5%;
+}
+
+.menuBar {
+  font-size: 2rem;
+  color: var(--primaryColor);
+  display: none;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+.logo span {
+  color: var(--secondaryColor);
+}
+
+.menu,
+ul,
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.menu ul li {
+  list-style: none;
+  position: relative;
+}
+
+.menu ul li ::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: var(--secondaryColor);
+  bottom: -6px;
+  border-radius: 10px;
+}
+
+.menu ul li :hover::before {
+  width: 100%;
+  transition: 0.6s;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+
+.menu ul li a:hover {
+  color: var(--secondaryColor);
+}
+
+.icons {
+  padding: 0 30px;
+  border-left: 2px solid var(--borderColor);
+  border-right: 2px solid var(--borderColor);
+}
+.icons a i {
+  font-size: 1.2em;
+  color: var(--primaryColor);
+}
+
+.icons a i:hover {
+  color: var(--secondaryColor);
+  transition: 0.6s;
+}
+
+.btn {
+  height: 38px;
+  width: 128px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid var(--borderColor);
+  color: #fff;
+  background: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  background-color: var(--actionColor);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  top: 0;
+  transition: 0.6s;
+}
+.btn:hover {
+  color: var(--secondaryColor);
+  border: 2px solid var(--actionColor);
+}
+
+@media screen and (max-width: 1150px) {
+  .menu,
+  icons {
+    display: none;
+  }
+  .menuBar {
+    display: block;
+    cursor: pointer;
+  }
+  .menuBar:hover {
+    transition: 0.6s;
+    transform: scale(1.2);
+  }
+}
